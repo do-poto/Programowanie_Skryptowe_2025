@@ -14,7 +14,7 @@ sum=$(sha256sum $nazwa | awk '{print $1}')
 curl --request GET \
      --url https://www.virustotal.com/api/v3/files/$sum \
      --header 'accept: application/json' \
-     --header 'x-apikey: 63c7c3e4ce1410d53556554d527211050c623476a7825c470bf96f827f671b63' >> ResultText.txt
+     --header 'x-apikey: ' >> ResultText.txt
 
 #Pokazanie wyniku'
 echo "Ten jest plik ma reputacje w skali 0-96: "
