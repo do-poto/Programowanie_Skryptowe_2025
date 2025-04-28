@@ -34,7 +34,7 @@ function Request-FileCheck{
     #tworzenie naglowka
     $headers=@{}
     $headers.Add("accept", "application/json")
-    $headers.Add("x-apikey", "63c7c3e4ce1410d53556554d527211050c623476a7825c470bf96f827f671b63")
+    $headers.Add("x-apikey", "")
     #request i zwrot
     $response = Invoke-WebRequest -Uri $URI -Method GET -Headers $headers
     #Write-Host "File status:" $response.StatusDescription
