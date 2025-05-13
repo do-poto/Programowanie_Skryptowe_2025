@@ -5,10 +5,7 @@
   .DESCRIPTION
   Connect-Server.ps1 creates a short session to execute a script
   (pwd, ls) and saves the outputs of the session to a local file.
-
-  .PARAMETER hostName
-  Specifies the name of the server to connect to.
-
+  
   .INPUTS
   None. You can't pipe objects to Connect-Server.ps1.
 
@@ -19,7 +16,7 @@
   PS> .\Connect-Server.ps1
   Provide full hostname: [username]@[hostname]
 #>
-function Connect-SessionSSH(){
+function Connect-SessionSSH{
     param([Parameter(Position=0, Mandatory=$true)][String]$hostName)
     
     #script to be executed

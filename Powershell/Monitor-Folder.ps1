@@ -57,6 +57,6 @@ function Start-Monitoring{
     }
 }
 
-#wywolanie funkcji
+#invoke functions
 Test-Folder
 Start-Monitoring
