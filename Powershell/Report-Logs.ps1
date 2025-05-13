@@ -1,3 +1,23 @@
+<#
+  .SYNOPSIS
+  Connects to a server and checks logs for new SSH connections.
+
+  .DESCRIPTION
+  Report-Logs.ps1 connects to a remote server via SSH and check if
+  there have been any new logins since it started working. Once
+  a new login is detected it will inform the user about it.
+  
+  .INPUTS
+  None. You can't pipe objects to Report-Logs.ps1
+
+  .OUTPUTS
+  Outputs "New SSH login detected!" when new SSH login takes place.
+
+  .EXAMPLE
+  PS> .\Report-Logs.ps1
+  Provide host name: [host name]
+  Provide username: [username]
+#>
 function Report-SSHlogs{
     #parameters of the funciton
     param([Parameter(position = 0, mandatory = $true)][String]$hostName,
@@ -25,6 +45,6 @@ function Report-SSHlogs{
 }
 #gather connection data
 $arg1 = Read-Host "Provide host name"
-$arg2 = Read-Host "Provide user name"
+$arg2 = Read-Host "Provide username"
 #invoke funciton
 Report-SSHlogs -hostName $arg1 -userName $arg2
