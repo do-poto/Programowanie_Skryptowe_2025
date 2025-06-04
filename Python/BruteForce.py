@@ -1,4 +1,3 @@
-import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -37,6 +36,7 @@ def try_force(url):
 
             #stop if password logged user in
             if(driver.current_url != url):
+                  print("Brute force succesful")
                   break
             
             #clear before next insert

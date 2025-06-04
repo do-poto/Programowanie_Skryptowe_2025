@@ -34,9 +34,5 @@ def inject():
     #click button
     action.perform()
 
-    #close session after 30 seconds 
-    #remove lines if continued session needed 
-    time.sleep(30)
-    driver.close()
 
 inject()
