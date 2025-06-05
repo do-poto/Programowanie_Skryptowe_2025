@@ -11,9 +11,7 @@ def inject_XSS():
 
     #establish session
     driver = webdriver.Firefox(options=webdriver.FirefoxOptions())
+    #create a connection with the payload in url
     driver.get(url)
-    #initialize actions driver
-    action = ActionChains(driver)
-
 
 inject_XSS()
